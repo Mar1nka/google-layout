@@ -18,6 +18,8 @@ body {
     justify-content: flex-start;
     align-items: center;
 
+    max-height: 100%;
+
 }
 
 main {
@@ -28,6 +30,8 @@ main {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+
+    flex: 1;
 }
 
 .menu {
@@ -80,7 +84,11 @@ main {
 
     width: 30px;
     height: 30px;
+}
 
+.menu__link--applications:hover {
+    opacity: 1;
+    transition: opacity 0.3s;
 }
 
 .menu__entry {
@@ -118,6 +126,11 @@ main {
     width: 272px;
 }
 
+.search-form {
+
+}
+
+
 
 .search {
     margin-bottom: 18px;
@@ -129,13 +142,18 @@ main {
     align-items: center;
 
     color: rgb(34, 34, 34);
-    overflow: hidden;
+    /*overflow: hidden;*/
 
-    outline: 1px solid #E0E0E0;
-
-    border-bottom: 2px solid #C8C8C8;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
     border-radius: 2px;
 
+
+
+}
+
+.search:hover {
+    box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.08);
+    transition: box-shadow 0.3s;
 }
 
 .search__field {
@@ -177,27 +195,69 @@ main {
 .search__button {
     background: none;
     border: none;
+
     width: 40px;
     height: 44px;
 
     display: inline-block;
     padding:  0 8px;
+
+    position: relative;
+
+
 }
 
 .search__button-icon {
     display: inline-block;
 }
 
+.search__button .search__button-icon--tool {
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+    border: 1px solid white;
+
+    top: 50px;
+    left: -50%;
+
+    padding: 5px;
+    position: absolute;
+}
+
+.search__button:hover .search__button-icon--tool {
+    visibility: visible;
+}
+
+.search__button .search__button-icon--tool::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
 
 .search__button-icon--electronic-keyboard  {
     width: 20px;
     height: 11px;
-    background-image: url(images/keyboard.png);
+    background-image: url(images/keyboard.gif);
     background-repeat: no-repeat;
     background-size: cover;
     font-size: 16px;
     text-align: center;
     vertical-align: middle;
+    opacity: 0.6;
+}
+
+.search__button-icon--electronic-keyboard:hover {
+    opacity: 1;
+    cursor: pointer;
+    transition: opacity 0.3s;
 }
 
 .search__button-icon--voice-search {
@@ -209,6 +269,10 @@ main {
     font-size: 16px;
     text-align: center;
     vertical-align: middle;
+}
+
+.search__button-icon--voice-search:hover {
+    cursor: pointer;
 }
 
 
