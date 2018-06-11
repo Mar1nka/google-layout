@@ -126,29 +126,21 @@ main {
     width: 272px;
 }
 
-.search-form {
 
-}
-
-
+/* search */
 
 .search {
-    margin-bottom: 18px;
-    height: 44px;
-
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
 
-    color: rgb(34, 34, 34);
-    /*overflow: hidden;*/
+    margin-bottom: 18px;
+    height: 44px;
 
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
     border-radius: 2px;
-
-
-
+    color: rgb(34, 34, 34);
 }
 
 .search:hover {
@@ -157,14 +149,13 @@ main {
 }
 
 .search__field {
-    height: 44px;
-    width: 488px;
-
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
 
+    height: 44px;
+    width: 488px;
     padding: 5px 9px 0 19px;
 }
 
@@ -173,7 +164,6 @@ main {
     height: 34px;
     line-height: 34px;
     text-align: start;
-
     border: none;
 }
 
@@ -182,29 +172,26 @@ main {
 }
 
 
-.search__buttons {
-    padding: 0 8px;
-    line-height: 24px;
 
+.search__buttons {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+
+    padding: 0 8px;
+    line-height: 24px;
 }
 
 .search__button {
-    background: none;
-    border: none;
-
+    display: inline-block;
+    position: relative;
     width: 40px;
     height: 44px;
-
-    display: inline-block;
     padding:  0 8px;
 
-    position: relative;
-
-
+    background: none;
+    border: none;
 }
 
 .search__button-icon {
@@ -213,17 +200,17 @@ main {
 
 .search__button .search__button-icon--tool {
     visibility: hidden;
+
+    position: absolute;
+    top: 50px;
+    left: -50%;
+    padding: 5px;
+
     background-color: black;
     color: #fff;
     font-size: 13px;
     text-align: center;
     border: 1px solid white;
-
-    top: 50px;
-    left: -50%;
-
-    padding: 5px;
-    position: absolute;
 }
 
 .search__button:hover .search__button-icon--tool {
@@ -236,15 +223,17 @@ main {
     bottom: 100%;
     left: 50%;
     margin-left: -5px;
+
     border-width: 5px;
     border-style: solid;
     border-color: transparent transparent black transparent;
 }
 
 
-.search__button-icon--electronic-keyboard  {
+.search__button-icon--screen-keyboard  {
     width: 20px;
     height: 11px;
+
     background-image: url(images/keyboard.gif);
     background-repeat: no-repeat;
     background-size: cover;
@@ -254,15 +243,18 @@ main {
     opacity: 0.6;
 }
 
-.search__button-icon--electronic-keyboard:hover {
-    opacity: 1;
+.search__button--screen-keyboard:hover {
     cursor: pointer;
+}
+.search__button--screen-keyboard:hover .search__button-icon--screen-keyboard{
+    opacity: 1;
     transition: opacity 0.3s;
 }
 
 .search__button-icon--voice-search {
     width: 20px;
     height: 22px;
+
     background-image: url(images/microphone.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -271,10 +263,13 @@ main {
     vertical-align: middle;
 }
 
-.search__button-icon--voice-search:hover {
+.search__button--voice-search:hover {
     cursor: pointer;
 }
 
+
+
+/* buttons */
 
 .buttons {
     width: 571px;
