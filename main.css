@@ -19,7 +19,6 @@ body {
     align-items: center;
 
     max-height: 100%;
-
 }
 
 main {
@@ -206,11 +205,24 @@ main {
     left: -50%;
     padding: 5px;
 
-    background-color: black;
+    background-color: #2D2D2D;
     color: #fff;
-    font-size: 13px;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 15px;
+
     text-align: center;
     border: 1px solid white;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
+    white-space: nowrap;
+}
+
+.search__button--screen-keyboard .search__button-icon--tool {
+    left: -111%;
+}
+
+.search__button--voice-search .search__button-icon--tool {
+    left: -77%;
 }
 
 .search__button:hover .search__button-icon--tool {
@@ -226,7 +238,7 @@ main {
 
     border-width: 5px;
     border-style: solid;
-    border-color: transparent transparent black transparent;
+    border-color: transparent transparent #2D2D2D transparent;
 }
 
 
@@ -292,13 +304,11 @@ main {
 
 .buttons__item:hover {
     background-image: -webkit-linear-gradient(top,#f8f8f8,#f1f1f1);
-    /*background-color: #f8f8f8;*/
     border: 1px solid #c6c6c6;
     box-shadow: 0 1px 1px rgba(0,0,0,0.1);
     color: #222;
 
     transition: all 0.3s;
-
 }
 
 .language {
