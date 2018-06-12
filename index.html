@@ -2,31 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Google</title>
 
     <link href="main.css" rel="stylesheet">
+    <link href="main-small.css" rel="stylesheet">
 
 </head>
 <body>
 
 <div class="menu">
-    <div class="menu__item menu__mail">
-        <a class="menu__link menu__link--mail" href="https://mail.google.com/mail/?tab=wm">Почта</a>
+    <div class="menu__part menu__part--1">
+        <div class="menu__item menu__button-menu">
+            <svg style="fill:#757575;width:24px;height:24px" viewBox="0 0 24 24">
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+            </svg>
+            <!--<a class="menu__link menu__link&#45;&#45;button-menu" href="https://mail.google.com/mail/?tab=wm"></a>-->
+        </div>
+
+        <div class="menu__item menu__all">
+            <a class="menu__link menu__link--all" href="https://www.google.com/webhp?output=search">Все</a>
+        </div>
+
+        <div class="menu__item menu__mail">
+            <a class="menu__link menu__link--mail" href="https://mail.google.com/mail/?tab=wm">Почта</a>
+        </div>
+
+        <div class="menu__item menu__images">
+            <a class="menu__link menu__link--images" href="https://www.google.by/imghp?hl=ru&tab=wi">Картинки</a>
+        </div>
     </div>
 
-    <div class="menu__item menu__images">
-        <a class="menu__link menu__link--images" href="https://www.google.by/imghp?hl=ru&tab=wi">Картинки</a>
-    </div>
+    <div class="menu__part menu__part--2">
+        <div class="menu__item menu__applications">
+            <a class="menu__link menu__link--applications" href="https://www.google.by/intl/ru/options/"
+               aria-expanded="false" role="button" tabindex="0" title="Приложения Google"></a>
+        </div>
 
-    <div class="menu__item menu__applications">
-        <a class="menu__link menu__link--applications" href="https://www.google.by/intl/ru/options/"
-           aria-expanded="false" role="button" tabindex="0" title="Приложения Google"></a>
-    </div>
-
-    <div class="menu__item menu__entry">
-        <a class="menu__link menu__link--entry"
-           href="https://accounts.google.com/ServiceLogin?hl=ru&passive=true&continue=https://www.google.com/"
-           target="_top">Войти</a>
+        <div class="menu__item menu__entry">
+            <a class="menu__link menu__link--entry"
+               href="https://accounts.google.com/ServiceLogin?hl=ru&passive=true&continue=https://www.google.com/"
+               target="_top">Войти</a>
+        </div>
     </div>
 </div>
 
@@ -53,12 +71,19 @@
                     <span class="search__button-icon search__button-icon--voice-search"></span>
                     <span class="search__button-icon--tool">Голосовой поиск</span>
                 </button>
+
+                <button type="button" class="search__button search__button--loupe" >
+                    <span class="search__button-icon search__button-icon--loupe">
+                        <svg style="fill:white;" focusable="false" viewBox="0 0 24 24">
+                            <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5
+                            16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01
+                            14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                        </svg>
+                    </span>
+                </button>
             </div>
-
-
-
-
         </div>
+
 
         <div class="buttons">
             <button class="buttons__item" type="submit">Поиск в Google</button>

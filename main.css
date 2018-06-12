@@ -48,8 +48,19 @@ main {
     line-height: 24px;
 }
 
+.menu__part {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 .menu__item {
     padding-left: 15px;
+}
+
+.menu__button-menu, .menu__all {
+    display: none;
 }
 
 .menu__link {
@@ -67,13 +78,6 @@ main {
     transition: text-decoration-line 0.3s;
 }
 
-.menu__link--entry:hover {
-    cursor: default;
-}
-
-.menu__applications {
-
-}
 
 .menu__link--applications {
     background-image: url("images/icons.png");
@@ -90,8 +94,6 @@ main {
     transition: opacity 0.3s;
 }
 
-.menu__entry {
-}
 
 .menu__link--entry {
     padding: 0 12px;
@@ -103,6 +105,10 @@ main {
 
     font-weight: bold;
     color: white;
+}
+
+.menu__link--entry:hover {
+    cursor: default;
 }
 
 /*   Logo   */
@@ -127,6 +133,7 @@ main {
 
 
 /* search */
+
 
 .search {
     display: flex;
@@ -193,6 +200,10 @@ main {
     border: none;
 }
 
+.search__button--loupe {
+    display: none;
+}
+
 .search__button-icon {
     display: inline-block;
 }
@@ -202,7 +213,7 @@ main {
 
     position: absolute;
     top: 50px;
-    left: -50%;
+    /*left: -50%;*/
     padding: 5px;
 
     background-color: #2D2D2D;
@@ -215,15 +226,9 @@ main {
     border: 1px solid white;
     box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
     white-space: nowrap;
+    transform: translate(-58%, 0%);
 }
 
-.search__button--screen-keyboard .search__button-icon--tool {
-    left: -111%;
-}
-
-.search__button--voice-search .search__button-icon--tool {
-    left: -77%;
-}
 
 .search__button:hover .search__button-icon--tool {
     visibility: visible;
@@ -318,21 +323,20 @@ main {
     font-size: 13px;
 
     margin-bottom: 24px;
+}
 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.language div {
+    display: inline-block;
 }
 
 .language__link {
     padding: 0 3px;
-
     text-decoration: none;
+    display: inline-block;
 }
 
 .language__link:hover {
- text-decoration: underline;
+    text-decoration: underline;
     transition: text-decoration 0.3s;
 }
 
@@ -364,7 +368,7 @@ footer {
     justify-content: space-between;
     align-items: center;
 
-    height: 41px;
+
     background: #F2F2F2;
     color: rgb(102, 102, 102);
     font-size: 13px;
@@ -379,6 +383,8 @@ footer {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+
+    height: 41px;
 }
 
 .info__item {
