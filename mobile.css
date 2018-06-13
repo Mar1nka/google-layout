@@ -14,7 +14,7 @@
         padding-left: 0px;
     }
 
-    .menu__all, .menu__images {
+    .menu__item--all, .menu__item--images {
         height: 48px;
         padding: 0 8px;
         margin-right: 8px;
@@ -22,15 +22,15 @@
 
 
 
-    .menu__mail {
+    .menu__item--mail {
         display: none;
     }
 
-    .menu__button-menu, .menu__all {
+    .menu__button-menu, .menu__item--all {
         display: inline-block;
     }
 
-    .menu__all {
+    .menu__item--all {
         border-bottom: 2px solid rgb(66, 133, 244);
         color: rgb(66, 133, 244);
     }
@@ -137,7 +137,7 @@
     .search__button--loupe {
         display: inline-block;
         width: 40px;
-        height: 40px;
+        height: 39px;
 
         background: rgb(59, 120, 231);
         border: 1px solid rgb(51, 103, 214);
@@ -179,15 +179,15 @@
     .info__links {
     }
 
-    .info__confidentiality {
+    .info__item--confidentiality {
         order: 2;
     }
 
-    .info__conditions {
+    .info__item--conditions {
         order: 3;
     }
 
-    .info__settings {
+    .info__item--settings {
         order: 1;
     }
 }
@@ -201,5 +201,9 @@
     }
     .search__field {
         width: 100%;
+    }
+
+    .info__item {
+        padding-left: 15px;
     }
 }
