@@ -9,6 +9,8 @@
     <link href="mobile.css" rel="stylesheet">
 
 </head>
+
+
 <body>
 
 <div class="menu">
@@ -48,8 +50,8 @@
     </div>
 </div>
 
-<main>
 
+<main>
     <div class="logo">
         <img class="logo__img" src="images/logo.png" alt="Google">
     </div>
@@ -84,7 +86,6 @@
             </div>
         </div>
 
-
         <div class="buttons">
             <button class="buttons__item" type="submit">Поиск в Google</button>
             <button class="buttons__item" type="submit">Мне повезёт!</button>
@@ -93,18 +94,12 @@
         <div class="language">
             <div>Сервисы Google доступны на разных языках:</div>
             <a class="language__link" href="https://www.google.com/setprefs?sig=0_8ab1n2pjmun0PtaVhTwM1OUBLEg%3D&hl=be&source=homepage&sa=X&ved=0ahUKEwi7686wocTbAhVF_iwKHcKcBToQ2ZgBCAg">Беларуская</a>
-
         </div>
     </form>
-
-
-
-
-
 </main>
 
-<footer>
 
+<footer>
     <div class="country">Беларусь</div>
     <div class="info">
         <div class="info__links">
@@ -118,11 +113,57 @@
             <a href="" class="info__item info__item--conditions">Условия</a>
             <a href="" class="info__item info__item--settings">Настройки</a>
         </div>
+    </div>
+</footer>
 
+
+<div class="open-menu">
+    <div class="open-menu__content">
+        <a class="open-menu__item open-menu__item--logo">
+            <img src="images/logo.png">
+        </a>
+
+        <a class="open-menu__item" href="/?hl=ru-BY&sa=X&ved=0ahUKEwi45LWVx9DbAhWlAJoKHYypBr4QnZcCCAQ">
+            <span class="open-menu__item--icon">
+                <img src="images/home_icon.svg">
+            </span>
+            <span class="open-menu__item--text">Главная страница</span>
+        </a>
+
+        <a class="open-menu__item" href="/save?hl=ru-BY&sa=X&ved=0ahUKEwi45LWVx9DbAhWlAJoKHYypBr4QnpcCCAU">
+            <span class="open-menu__item--icon">
+                <img src="images/save_icon.svg">
+            </span>
+            <span class="open-menu__item--text">Сохранено</span>
+        </a>
+
+        <div class="open-menu__strip"></div>
+
+        <a class="open-menu__item" href="/preferences?hl=ru-BY&sa=X&ved=0ahUKEwi45LWVx9DbAhWlAJoKHYypBr4Qn5cCCAY">
+            <span class="open-menu__item--icon">
+                <img src="images/settings_icon.svg">
+            </span>
+            <span class="open-menu__item--text">Настройки</span>
+        </a>
+
+        <a class="open-menu__item" href="https://support.google.com/websearch/?p=ws_results_help&hl=ru-BY">
+            <span class="open-menu__item--icon">
+                <img src="images/help_icon.svg">
+            </span>
+            <span class="open-menu__item--text">Справка</span>
+        </a>
+
+        <a class="open-menu__item" href="#">
+            <span class="open-menu__item--icon">
+                <img src="images/feedback_icon.svg">
+            </span>
+            <span class="open-menu__item--text">Отправить отзыв</span>
+        </a>
 
     </div>
+</div>
 
-</footer>
+<script src="open-menu.js"></script>
 
 </body>
 </html>

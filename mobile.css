@@ -1,5 +1,10 @@
 @media (max-width: 1024px) {
 
+    .open-menu--show {
+        display: block;
+    }
+
+
     .menu {
         width: 100%;
         justify-content: space-between;
