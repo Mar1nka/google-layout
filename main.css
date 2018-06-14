@@ -7,30 +7,29 @@
 html, body {
     width: 100%;
     height: 100%;
-
     min-width: 320px;
 }
 
 body {
-    font-family: arial,sans-serif;
-    background: white;
-
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 
     max-height: 100%;
+
+    font-family: arial,sans-serif;
+    background: white;
 }
 
 main {
-    height: 100%;
-    width: 100%;
-
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+
+    height: 100%;
+    width: 100%;
 
     flex: 1;
 }
@@ -66,13 +65,14 @@ main {
 }
 
 .menu__link {
+    display: inline-block;
+
     outline: none;
     vertical-align: middle;
-
     color: rgba(0, 0, 0, 0.87);
     text-decoration-line: none;
     text-decoration-color: black;
-    display: inline-block;
+
 }
 
 .menu__link--mail:hover, .menu__link--images:hover {
@@ -80,22 +80,20 @@ main {
     transition: text-decoration-line 0.3s;
 }
 
-
 .menu__link--applications {
+    width: 30px;
+    height: 30px;
+
     background-image: url("images/icons.png");
     background-position: -132px -38px;
     background-size: 528px 68px;
     opacity: 0.55;
-
-    width: 30px;
-    height: 30px;
 }
 
 .menu__link--applications:hover {
     opacity: 1;
     transition: opacity 0.3s;
 }
-
 
 .menu__link--entry {
     padding: 0 12px;
@@ -104,7 +102,6 @@ main {
     background-image: -webkit-linear-gradient(top,#4387fd,#4683ea);
     border: 1px solid rgb(66, 133, 244);
     border-radius: 2px;
-
     font-weight: bold;
     color: white;
 }
@@ -113,6 +110,8 @@ main {
     cursor: default;
 }
 
+
+
 /*   Logo   */
 
 .logo {
@@ -120,11 +119,11 @@ main {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
     width: 100%;
     min-height: fit-content; /*  мин высота по содержимому*/
     text-align: center;
     margin-bottom: 20px;
-
 }
 
 .logo__img {
@@ -134,8 +133,8 @@ main {
 }
 
 
-/* search */
 
+/* search */
 
 .search {
     display: flex;
@@ -170,6 +169,7 @@ main {
 .search__field input {
     width: 100%;
     height: 34px;
+
     line-height: 34px;
     text-align: start;
     border: none;
@@ -178,7 +178,6 @@ main {
 .search__field input:focus {
     outline: none;
 }
-
 
 
 .search__buttons {
@@ -212,10 +211,8 @@ main {
 
 .search__button .search__button-icon--tool {
     visibility: hidden;
-
     position: absolute;
     top: 50px;
-    /*left: -50%;*/
     padding: 5px;
 
     background-color: #2D2D2D;
@@ -230,7 +227,6 @@ main {
     white-space: nowrap;
     transform: translate(-58%, 0%);
 }
-
 
 .search__button:hover .search__button-icon--tool {
     visibility: visible;
@@ -247,7 +243,6 @@ main {
     border-style: solid;
     border-color: transparent transparent #2D2D2D transparent;
 }
-
 
 .search__button-icon--screen-keyboard  {
     width: 20px;
@@ -304,7 +299,6 @@ main {
     background: rgb(242, 242, 242);
     border: 1px solid rgb(242, 242, 242);
     border-radius: 2px;
-
     color: rgb(117, 117, 117);
     font-weight: bold;
 }
@@ -319,12 +313,11 @@ main {
 }
 
 .language {
-    text-align: center;
     width: 100%;
-    line-height: 28px;
-    font-size: 13px;
-
     margin-bottom: 24px;
+    line-height: 28px;
+    text-align: center;
+    font-size: 13px;
 }
 
 .language div {
@@ -332,9 +325,10 @@ main {
 }
 
 .language__link {
-    padding: 0 3px;
-    text-decoration: none;
     display: inline-block;
+    padding: 0 3px;
+
+    text-decoration: none;
 }
 
 .language__link:hover {
@@ -351,17 +345,15 @@ footer {
 }
 
 .country {
-    padding: 0 30px;
-    height: 41px;
     width: 100%;
+    height: 41px;
+    padding: 0 30px;
+    line-height: 40px;
 
     background: #F2F2F2;
     color: rgba(0,0,0,.54);
     font-size: 15px;
-    line-height: 40px;
-
     border-top: 1px solid rgb(228, 228, 228);
-
 }
 
 .info {
@@ -370,13 +362,12 @@ footer {
     justify-content: space-between;
     align-items: center;
 
+    padding-right: 30px;
+    line-height: 40px;
 
     background: #F2F2F2;
     color: rgb(102, 102, 102);
     font-size: 13px;
-    padding-right: 30px;
-    line-height: 40px;
-
     border-top: 1px solid rgb(228, 228, 228);
 }
 
@@ -399,6 +390,7 @@ footer {
     text-decoration: underline;
     transition: text-decoration 0.3s;
 }
+
 
 
 /* side-menu */
@@ -433,7 +425,6 @@ footer {
     background: rgb(255, 255, 255);
     padding-top: 15px;
 
-    transform: matrix(1, 0, 0, 1, 250, 0);
     transition: all 0.5s ease;
 
     z-index: 200;
