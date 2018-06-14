@@ -8,6 +8,7 @@
         openMenu.addEventListener('click', clickOpenMenuHandler);
 
         // let openMenuContent = document.querySelector('.side-menu__content');
+        // openMenuContent.classList.remove('side-menu__content--closed');
         // openMenuContent.classList.toggle('side-menu__content--opened');
     }
 
@@ -20,7 +21,8 @@
             openMenu.removeEventListener('click', clickOpenMenuHandler);
 
             // let openMenuContent = document.querySelector('.open-menu__content');
-            // openMenuContent.classList.toggle('side-menu__content--opened');
+            // openMenuContent.classList.remove('side-menu__content--opened');
+            // openMenuContent.classList.toggle('side-menu__content--closed ');
         }
     }
 
