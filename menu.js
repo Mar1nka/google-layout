@@ -1,14 +1,14 @@
 (function () {
     let buttonMenu = document.querySelector('.menu__button-menu');
-    buttonMenu.addEventListener('click', clickButtonMenuHandler);
+    buttonMenu.addEventListener('click', menuButtonClickHandler);
 
-    function clickButtonMenuHandler () {
+    function menuButtonClickHandler () {
         let openMenu = document.querySelector('.side-menu');
         let openMenuContent = document.querySelector('.side-menu__content');
 
         openMenu.classList.toggle('side-menu--visible');
-        openMenu.classList.remove('side-menu--transparence');
-        openMenu.addEventListener('click', clickOpenMenuHandler);
+        openMenu.classList.remove('side-menu--transparent');
+        openMenu.addEventListener('click', sideMenuClickHandler);
 
         openMenuContent.classList.remove('side-menu__content--closed');
 
@@ -18,28 +18,25 @@
     }
 
 
-    function clickOpenMenuHandler () {
+    function sideMenuClickHandler () {
 
         if (!event.target.closest('.side-menu__content')) {
             let openMenu = document.querySelector('.side-menu');
             let openMenuContent = document.querySelector('.side-menu__content');
 
             openMenuContent.classList.toggle('side-menu__content--opened');
-            openMenuContent.addEventListener('transitionend', transitionEndHandler);
+            openMenuContent.addEventListener('transitionend', sideMenuTransitionEndHandler);
+            openMenuContent.classList.toggle('side-menu__content--closed');
 
-            openMenu.classList.toggle('side-menu--transparence');
-            openMenu.removeEventListener('click', clickOpenMenuHandler);
-
-            setTimeout(() => {
-                openMenuContent.classList.toggle('side-menu__content--closed');
-            }, 0);
+            openMenu.classList.toggle('side-menu--transparent');
+            openMenu.removeEventListener('click', sideMenuClickHandler);
         }
     }
 
 
-    function transitionEndHandler() {
+    function sideMenuTransitionEndHandler() {
         let openMenuContent = document.querySelector('.side-menu__content');
-        openMenuContent.removeEventListener('transitionend', transitionEndHandler);
+        openMenuContent.removeEventListener('transitionend', sideMenuTransitionEndHandler);
 
         let openMenu = document.querySelector('.side-menu');
         openMenu.classList.toggle('side-menu--visible');
